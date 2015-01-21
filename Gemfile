@@ -30,4 +30,5 @@ group :development, :test do
   gem 'guard-rails', require: false
   gem 'guard-livereload', require: false
   gem 'letter_opener'
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 end
