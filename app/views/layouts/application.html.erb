@@ -9,30 +9,75 @@
 </head>
 <body>
 <div class="maincontainer">
-  <div class="headercontainer">
-    <div class="header">
-      <div class="logo block">
-        <img src="">
+  <div class="pagecontainer">
+    <div class="headercontainer container">
+      <div class="header">
+        <div class="logo block">
+        logo here
+          <img src="">
+        </div>
+        <nav class="block navbar">
+          <ul>
+            <li><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></li>
+            <li><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></li>
+            <li><%= link_to 'Om oss', pages_about_path, class: navigation_class(pages_about_path) %></li>
+            <li><%= link_to 'Program', pages_program_path %></li>
+            <li><%= link_to 'Länkar', pages_links_path %></li>
+            <li><%= link_to 'Förbön', pages_prayer_path %></li>
+          </ul>
+        </nav>
+        <div class="cleardiv"></div>
       </div>
-
-      <nav class="block navbar">
-        <ul>
-          <li><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></li>
-          <li><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></li>
-          <li><%= link_to 'Om oss', pages_about_path, class: navigation_class(pages_about_path) %></li>
-          <li><%= link_to 'Program', pages_program_path %></li>
-          <li><%= link_to 'Länkar', pages_links_path %></li>
-          <li><%= link_to 'Förbön', pages_prayer_path %></li>
-        </ul>
-      </nav>
-
     </div>
+    <div id="slideshow">
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+      <p>slideshow</p>
+    </div>
+
+    <div id="calander">
+      <div>
+        <div class="event">
+          <p class="ebentdate"></p>
+          <p class="eventname"></p>
+        </div>
+        <div class="event">
+          <p class="ebentdate"></p>
+          <p class="eventname"></p>
+        </div>
+        <div class="event">
+          <p class="ebentdate"></p>
+          <p class="eventname"></p>
+        </div>
+        <div class="event">
+          <p class="ebentdate"></p>
+          <p class="eventname"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rendering page -->
+    <%= yield %>
+
+    <footer id="footer">
+      <ul class="sitemap">
+        <li>footer item</li>
+        <li>footer item</li>
+        <li>footer item</li>
+        <li>footer item</li>
+        <li>footer item</li>
+        <li>footer item</li>
+      </ul>
+    </footer>
   </div>
 
-
 </div>
-
-<%= yield %>
-
 </body>
 </html>
