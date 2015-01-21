@@ -16,9 +16,9 @@
 
       <nav class="block navbar">
         <ul>
-          <li><%= link_to 'Start', root_path %></li>
-          <li><%= link_to 'Aktiviteter', pages_activities_path %></li>
-          <li><%= link_to 'Om oss', pages_about_path %></li>
+          <li><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></li>
+          <li><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></li>
+          <li><%= link_to 'Om oss', pages_about_path, class: navigation_class(pages_about_path) %></li>
           <li><%= link_to 'Program', pages_program_path %></li>
           <li><%= link_to 'Länkar', pages_links_path %></li>
           <li><%= link_to 'Förbön', pages_prayer_path %></li>
