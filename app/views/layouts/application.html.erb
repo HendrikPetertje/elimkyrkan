@@ -7,6 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="maincontainer">
+  <div class="headercontainer">
+    <div class="header">
+      <div class="logo block">
+        <img src="">
+      </div>
+
+      <nav class="block navbar">
+        <ul>
+          <li><%= link_to 'Start', root_path %></li>
+          <li><%= link_to 'Aktiviteter', pages_activities_path %></li>
+          <li><%= link_to 'Om oss', pages_about_path %></li>
+          <li><%= link_to 'Program', pages_program_path %></li>
+          <li><%= link_to 'Länkar', pages_links_path %></li>
+          <li><%= link_to 'Förbön', pages_prayer_path %></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+
+</div>
 
 <%= yield %>
 
