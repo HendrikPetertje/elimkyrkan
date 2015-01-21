@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/activities'
+
+  get 'pages/about'
+
+  get 'pages/program'
+
+  get 'pages/links'
+
+  get 'pages/contact'
+
+  get 'pages/prayer'
+
   devise_for :users
   mount Ckeditor::Engine => '/ckeditor'
   # The priority is based upon order of creation: first created -> highest priority.
