@@ -14,23 +14,51 @@ html, body
   margin: 0 auto
   width: 960px
 
+
 .headercontainer
   background-color: $orange
 
 .logo
   float: left
 
-nav ul
-  float: right
-  li
-    display: inline-block
-    a
-      color: $white
-      &:hover
-        color: $gray
+nav
+  padding: 0px 15px
+  ul
+    float: right
+    font-size: 18pt
+    li
+      display: inline-block
+      a
+        color: $white
+        line-height: 90px
+        display: block
+        &:hover
+          color: $gray
+          //background-color: $white
 
 #footer
   background-color: $deep-blue
   padding: 15px
   .sitemap
     color: $white
+
+.fadein
+  -webkit-animation: fadein 0.4s
+  animation: fadein 0.4s
+
+@-webkit-keyframes fadein
+  0%
+    opacity: 0.7
+    transform: scale(0.99, 0.99)
+  100%
+    opacity: 1
+    transform: scale(1, 1)
+
+/* Standard syntax */
+@keyframes fadein
+  0%
+    opacity: 0.7
+    transform: scale(0.99, 0.99)
+  100%
+    opacity: 1
+    transform: scale(1, 1)
