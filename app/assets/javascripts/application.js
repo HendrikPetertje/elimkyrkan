@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require partials/animations
+//= require partials/std_script
