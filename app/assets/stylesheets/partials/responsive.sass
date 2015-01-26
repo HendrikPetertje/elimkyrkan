@@ -1,11 +1,33 @@
 
 .responsivecontent
-  width: 960px
+  width: 100%
   .responsivemaincontent
     float: left
-    width: 810px
+    width: 700px
   .responsivesidecontent
     float: right
-    width: 140px
+    width: 260px
     .responisvesideitem
       display: block
+      width: 100%
+
+@media screen and (max-width:1000px)
+  .responsivecontent
+    .responsivemaincontent
+      width: 100%
+    .responsivesidecontent
+      width: 100%
+
+      .responisvesideitem
+        display: inline-block
+        width: 350px
+
+@media screen and (max-width:360px)
+  .responsivecontent
+    .responsivemaincontent
+      width: 100%
+    .responsivesidecontent
+      width: 100%
+      .responisvesideitem
+        display: block
+        width: 100%
