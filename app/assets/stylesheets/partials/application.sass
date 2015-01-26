@@ -1,14 +1,18 @@
+//layout
 html, body
   width: 100%
+  background: $white
 
 .cleardiv
   clear: both
+
+.hidden
+  display: none
 
 .maincontainer
   width: 100%
   margin: 0
   padding: 0
-  background: $white
 
 .pagecontainer
   margin: 0 auto
@@ -16,7 +20,10 @@ html, body
 
 
 .headercontainer
-  background-color: $orange
+  background-color: $header
+  height: 90px
+  img
+    height: 90px
 
 .logo
   float: left
@@ -29,7 +36,7 @@ nav
     li
       display: inline-block
       a
-        color: $white
+        color: $light-blue
         line-height: 90px
         display: block
         &:hover
@@ -62,3 +69,14 @@ nav
   100%
     opacity: 1
     transform: scale(1, 1)
+
+//content area
+.maincontent
+  background: $orange
+  padding: 5px
+
+.sidecontent
+  .sideitem
+    background: $red
+    padding: 5px
+    margin-bottom: 5px

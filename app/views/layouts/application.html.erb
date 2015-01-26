@@ -6,19 +6,16 @@
   <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:800', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="maincontainer">
   <div class="pagecontainer fadein">
     <div class="headercontainer container">
-      <div class="header">
+      <header class="header">
         <div class="logo block">
-        logo here
-        <br />
-        <br />
-        <br />
-        <br />
-          <img src="">
+        <%= image_tag("elimkyrkanheader.jpg" ) %>
         </div>
         <nav class="block navbar">
           <ul>
@@ -31,8 +28,10 @@
           </ul>
         </nav>
         <div class="cleardiv"></div>
-      </div>
+      </header>
     </div>
+    <!-- Cleaning upp after header -->
+    <div style="height: 1px"></div>
     <div id="slideshow">
       <p>slideshow</p>
       <p>slideshow</p>
@@ -48,6 +47,7 @@
 
     <!-- Rendering page -->
     <%= yield %>
+    <div class="cleardiv"></div>
 
     <footer id="footer">
       <ul class="sitemap">
@@ -60,7 +60,11 @@
       </ul>
     </footer>
   </div>
-
 </div>
+
+<div class="hidden">
+  <div id="showslideshow">false</div>
+</div>
+
 </body>
 </html>
