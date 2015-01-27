@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:800', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta content="width=device-width, intial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,12 +15,12 @@
 <body>
 <div class="maincontainer">
   <div class="pagecontainer fadein">
-    <div class="headercontainer container">
-      <header class="header">
-        <div class="logo block">
-        <%= image_tag("elimkyrkanheader.jpg" ) %>
+    <div class="headercontainer container responsiveheadercontainer">
+      <header class="header responisveheader">
+        <div class="logo block responsivelogo">
+          <%= image_tag("elimkyrkanheader.jpg" ) %>
         </div>
-        <nav class="block navbar">
+        <nav class="block navbar responsivenavbar">
           <ul>
             <li><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></li>
             <li><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></li>
@@ -28,6 +29,11 @@
             <li><%= link_to 'Länkar', pages_links_path %></li>
             <li><%= link_to 'Förbön', pages_prayer_path %></li>
           </ul>
+          <div class="navbarexpander">
+            <a>Menu</a>
+            <%= image_tag('menu.png') %>
+            <div class="cleardiv"></div>
+          </div>
         </nav>
         <div class="cleardiv"></div>
       </header>

@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require partials/std_script
+//= require partials/responsive

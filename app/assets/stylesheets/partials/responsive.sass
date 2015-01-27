@@ -7,9 +7,26 @@
     float: right
     .responisvesideitem
       display: block
-      width: 250px
+      width: 260px
 
-@media screen and (max-width:1000px)
+
+.responisveheader
+
+.responsivelogo
+
+.responsivenavbar
+  ul
+    overflow: hidden
+    text-align: center
+    li
+      display: inline-block
+
+  .navbarexpander
+    display: none
+    width: 100%
+
+
+@media screen and (max-width:960px)
   .responsivecontent
     .responsivemaincontent
       width: 100%
@@ -18,9 +35,81 @@
       text-align: center
       .responisvesideitem
         display: inline-block
-        width: 31%
+        width: 33.33%
 
-@media screen and (max-width:550px)
+  .responsivelogo
+    width: 100%
+    height: auto
+
+  .responsivenavbar
+    clear: both
+    ul
+      float: none
+      overflow: hidden
+      text-align: center
+      li
+        display: inline-block
+
+  .navbarexpander
+    display: none
+    width: 100%
+
+@media screen and (max-width:560px)
+  .responsivecontent
+    .responsivemaincontent
+      width: 100%
+    .responsivesidecontent
+      width: 100%
+      text-align: center
+      .responisvesideitem
+        display: inline-block
+        width: 50%
+
+  .responsivelogo
+    float: none
+    img
+      width: 100%
+      height: auto
+  .responsivenavbar
+    background: $lighter-deep-blue
+    float: none
+    padding: 0
+    ul
+      overflow: hidden
+      text-align: center
+      li
+        box-sizeing: border-box
+        width: 100%
+        text-align: center
+        &:hover
+          background: $light-gray
+
+        a
+          color: $white
+
+    .navbarexpander
+      display: block
+      width: 100%
+      text-align: left
+      margin: 0
+      height: 90px
+      background: $deep-blue
+      a
+        color: $white
+        line-height: 90px
+        display: block
+        padding-left: 15px
+        font-size: 18pt
+        &:active
+          background: $light-gray
+
+      img
+        margin-top: -90px
+        height: 90px
+        width: auto
+        float: right
+
+@media screen and (max-width:360px)
   .responsivecontent
     .responsivemaincontent
       width: 100%
