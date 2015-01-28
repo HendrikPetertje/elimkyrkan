@@ -29,14 +29,14 @@
             // transition valuess
             animtype        : 'fade',
             animduration    : 450,      // length of transition
-            animspeed       : 4000,     // delay between transitions
+            animspeed       : 3000,     // delay between transitions
             automatic       : true,     // enable/disable automatic slide rotation
 
             // control and marker configuration
             showcontrols    : true,     // enable/disable next + previous UI elements
             centercontrols  : true,     // vertically center controls
-            nexttext        : 'Next',   // text/html inside next UI element
-            prevtext        : 'Prev',   // text/html inside previous UI element
+            nexttext        : '<div class="slideshowbtn"><img src="/assets/application/icons/arrow.svg"></div>',   // text/html inside next UI element
+            prevtext        : '<div class="slideshowbtn"><img src="/assets/application/icons/arrow.svg"></div>',   // text/html inside previous UI element
             showmarkers     : true,     // enable/disable individual slide UI markers
             centermarkers   : true,     // horizontally center markers
 
