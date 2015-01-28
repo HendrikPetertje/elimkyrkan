@@ -41,15 +41,21 @@
     </div>
     <!-- Cleaning upp after header -->
     <div style="height: 1px"></div>
-    <div class="notice message">
-      <h3>Inloggninngen lyckades</h3>
-    </div>
+    <% if flash[:notice] %>
+      <div class="notice message">
+        <h3><%= flash[:notice] %></h3>
+      </div>
+    <% end %>
+    <% if flash[:error] %>
     <div class="error message">
-      <h3>Inloggninngen lyckades</h3>
+      <h3><%= flash[:error] %></h3>
     </div>
+    <% end %>
+    <% if flash[:alert] %>
     <div class="alert message">
-      <h3>Inloggninngen lyckades</h3>
+      <h3>I<%= flash[:alert] %></h3>
     </div>
+    <% end %>
     <div id="slideshow boxitem">
       <p>slideshow</p>
       <p>slideshow</p>
