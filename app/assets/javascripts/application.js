@@ -16,3 +16,5 @@
 //= require partials/std_script
 //= require partials/responsive
 //= require partials/slideshow
+//= require partials/flash.coffee
+
