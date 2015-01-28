@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get 'pages/activities'
+  get 'aktiviteter', to: 'pages#activities', as: :pages_activities
 
-  get 'pages/about'
+  get 'om_oss', to: 'pages#about', as: :pages_about
 
-  get 'pages/program'
+  get 'program', to: 'pages#program', as: :pages_program
 
-  get 'pages/links'
+  get 'links', to: 'pages#links', as: :pages_links
 
-  get 'pages/contact'
+  get 'pages/contact', to: 'pages#contact', as: :pages_contact
 
-  get 'pages/prayer'
+  get 'pages/prayer', to: 'pages#prayer', as: :pages_prayer
 
+  resources :pages, only: [:edit, :update]
   devise_for :users
   mount Ckeditor::Engine => '/ckeditor'
 end
