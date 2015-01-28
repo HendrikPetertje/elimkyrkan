@@ -24,7 +24,6 @@ function navBar () {
   });
 }
 
-
 var ready;
 ready = function() {
   navBar();

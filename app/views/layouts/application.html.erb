@@ -9,9 +9,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta content="width=device-width, intial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
 <div class="maincontainer">
@@ -50,17 +48,12 @@
     <div class="alert message">
       <h3>Inloggninngen lyckades</h3>
     </div>
-    <div id="slideshow boxitem">
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
-      <p>slideshow</p>
+
+    <div id="my-slideshow" class="slideshow">
+      <ul class="bjqs">
+        <li></li>
+        <li></li>
+      </ul>
     </div>
 
     <!-- Rendering page -->
@@ -77,8 +70,8 @@
         <li>sitemap item</li>
       </ul>
       <div class="session">
-        <%= link_to 'sign in', new_user_session_path unless user_signed_in? %>
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete if user_signed_in? %>
+        <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Elimkyrkan Sundsvall - 2015
+        <%= link_to "Logga ut", destroy_user_session_path, :method => :delete if user_signed_in? %>
       </div>
     </footer>
   </div>
