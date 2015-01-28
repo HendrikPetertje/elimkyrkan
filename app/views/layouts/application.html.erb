@@ -76,6 +76,10 @@
         <li>sitemap item</li>
         <li>sitemap item</li>
       </ul>
+      <div class="session">
+        <%= link_to 'sign in', new_user_session_path unless user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete if user_signed_in? %>
+      </div>
     </footer>
   </div>
 </div>
