@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if User.where(email: 'peter@picoreclame.nl').any?
+  puts 'user Peter is alreaddy in the Database'
+else
+  User.create(
+    email: 'peter@picoreclame.nl',
+    password: '1234567890'
+  )
+end
