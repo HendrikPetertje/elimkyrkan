@@ -1,7 +1,7 @@
 //layout
 html, body
   width: 100%
-  background: $white
+  background: $background
 
 .cleardiv
   clear: both
@@ -9,6 +9,9 @@ html, body
 .hidden
   display: none
 
+.boxitem
+  // -webkit-box-shadow: 0 0 15px 1px rgba(0,0,0,0.3)
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.2)
 .maincontainer
   width: 100%
   margin: 0
@@ -36,6 +39,7 @@ nav
     font-size: 18pt
     li
       display: inline-block
+      padding-left: 10px
       a
         color: $light-blue
         line-height: 90px
@@ -46,6 +50,7 @@ nav
 #footer
   background-color: $deep-blue
   padding: 15px
+  margin-top: 10px
   .sitemap
     color: $white
 

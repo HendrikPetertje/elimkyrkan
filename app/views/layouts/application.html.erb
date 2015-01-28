@@ -17,7 +17,7 @@
 <div class="maincontainer">
   <div class="pagecontainer fadein">
     <div class="headercontainer container responsiveheadercontainer">
-      <header class="header responisveheader">
+      <header class="header responisveheader boxitem">
         <div class="logo block responsivelogo">
           <%= image_tag asset_path 'application/logo.jpg' %>
         </div>
@@ -41,7 +41,7 @@
     </div>
     <!-- Cleaning upp after header -->
     <div style="height: 1px"></div>
-    <div id="slideshow">
+    <div id="slideshow boxitem">
       <p>slideshow</p>
       <p>slideshow</p>
       <p>slideshow</p>
@@ -58,7 +58,7 @@
     <%= yield %>
     <div class="cleardiv"></div>
 
-    <footer id="footer">
+    <footer id="footer" class="boxitem">
       <ul class="sitemap">
         <li>sitemap item</li>
         <li>sitemap item</li>
@@ -69,10 +69,6 @@
       </ul>
     </footer>
   </div>
-</div>
-
-<div class="hidden">
-  <div id="showslideshow">false</div>
 </div>
 
 </body>
