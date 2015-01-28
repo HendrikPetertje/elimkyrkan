@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create some users
+puts 'Welome to the seed overlord'
+puts '--------------------------------'
+puts '--------------------------------'
 puts 'creating base users'
 
 # Peter van der Meulen
