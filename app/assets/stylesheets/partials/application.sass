@@ -4,20 +4,23 @@ html, body
   background: $background
 
 .slideshow
-  margin-bottom: 20px
-  margin-top: 20px
+  margin-bottom: 10px
+  margin-top: 10px
   @extend .boxitem
-  @extend .transition
 
 .slideshowbtn
-  background-color: rgba(0,0,0,0.3)
+  background-color: rgba(0,0,0,0)
   color: $white
-  height: 30px
-  line-height: 30px
-  width: 30px
+  height: 100px
+  line-height: 140px
+  width: 70px
   text-align: center
+  opacity: 0.2
+  @extend .transition
+  &:hover
+    opacity: 0.6
   img
-    width: 30px
+    width: 50px
 
 .cleardiv
   clear: both
@@ -72,19 +75,21 @@ nav
   padding: 0px 15px
   ul
     float: right
-    font-size: 18pt
+    font-size: 16pt
     li
       display: inline-block
       padding-left: 10px
-      a
-        color: $light-blue
-        line-height: 90px
-        display: block
-        &:hover
-          color: $gray
+      h2
+        a
+          color: $light-blue
+          line-height: 90px
+          display: block
+          font-effect: emboss
+          &:hover
+            color: $gray
 
 #footer
-  background-color: $deep-blue
+  background-color: $footer
   padding: 15px
   margin-top: 10px
 
