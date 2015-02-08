@@ -42,3 +42,12 @@ end
 
 puts 'Finished creating users'
 puts '--------------------------------'
+
+puts 'Creating base pages'
+if Page.where(title: 'home-intro').any?
+  puts 'Home was already created'
+else
+  if Page.create(title: 'home-intro', content: 'Please do some content editing')
+    puts 'Home was created succesfully'
+  end
+end
