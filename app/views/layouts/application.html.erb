@@ -5,10 +5,10 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <meta charset="utf-8">
   <title>Elimkyrkan - <%= yield(:title) %></title>
-  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:800', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cabin:400|Open+Sans:400', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <meta content="width=device-width, intial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -21,12 +21,12 @@
         </div>
         <nav class="block navbar responsivenavbar">
           <ul>
-            <li><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></li>
-            <li><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></li>
-            <li><%= link_to 'Om oss', pages_about_path, class: navigation_class(pages_about_path) %></li>
-            <li><%= link_to 'Program', pages_program_path %></li>
-            <li><%= link_to 'Länkar', pages_links_path %></li>
-            <li><%= link_to 'Förbön', pages_prayer_path %></li>
+            <li><h2><%= link_to 'Start', root_path, class: navigation_class_home(root_path) %></h2></li>
+            <li><h2><%= link_to 'Aktiviteter', pages_activities_path, class: navigation_class(pages_activities_path) %></h2></li>
+            <li><h2><%= link_to 'Om oss', pages_about_path, class: navigation_class(pages_about_path) %></h2></li>
+            <li><h2><%= link_to 'Program', pages_program_path %></h2></li>
+            <li><h2><%= link_to 'Länkar', pages_links_path %></h2></li>
+            <li><h2><%= link_to 'Förbön', pages_prayer_path %></h2></li>
           </ul>
           <div class="navbarexpander">
             <a>Meny</a>
@@ -41,17 +41,17 @@
     <div style="height: 1px"></div>
     <% if flash[:notice] %>
       <div class="notice message">
-        <h3><%= flash[:notice] %></h3>
+        <h4><%= flash[:notice] %></h4>
       </div>
     <% end %>
     <% if flash[:error] %>
     <div class="error message">
-      <h3><%= flash[:error] %></h3>
+      <h4><%= flash[:error] %></h4>
     </div>
     <% end %>
     <% if flash[:alert] %>
     <div class="alert message">
-      <h3>I<%= flash[:alert] %></h3>
+      <h4>I<%= flash[:alert] %></h4>
     </div>
     <% end %>
     <div id="my-slideshow" class="slideshow">
@@ -65,20 +65,21 @@
     <%= yield %>
     <div class="cleardiv"></div>
 
-    <%= image_tag asset_path "application/icons/arrow.svg" %>
-
     <footer id="footer" class="boxitem">
       <ul class="sitemap">
-        <li>sitemap item</li>
-        <li>sitemap item</li>
-        <li>sitemap item</li>
-        <li>sitemap item</li>
-        <li>sitemap item</li>
-        <li>sitemap item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
+        <li>Site map item</li>
       </ul>
       <div class="session">
-        <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Elimkyrkan Sundsvall - 2015
-        <%= link_to "Logga ut", destroy_user_session_path, :method => :delete if user_signed_in? %>
+        <h6>
+          <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Elimkyrkan Sundsvall - 2015
+          <%= link_to "Logga ut", destroy_user_session_path, :method => :delete if user_signed_in? %>
+        </h6>
       </div>
     </footer>
   </div>

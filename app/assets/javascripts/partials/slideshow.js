@@ -1,53 +1,38 @@
-/*
- * Basic jQuery Slider plug-in v.1.3
- *
- * http://www.basic-slider.com
- *
- * Authored by John Cobb
- * http://www.johncobb.name
- * @john0514
- *
- * Copyright 2011, John Cobb
- * License: GNU General Public License, version 3 (GPL-3.0)
- * http://www.opensource.org/licenses/gpl-3.0.html
- *
- */
-
-;(function($) {
+(function($) {
 
     "use strict";
 
     $.fn.bjqs = function(o) {
 
         // slider default settings
-        var defaults        = {
+        var defaults = {
 
             // w + h to enforce consistency
             width           : 960,
-            height          : 250,
+            height          : 300,
 
             // transition valuess
             animtype        : 'fade',
-            animduration    : 450,      // length of transition
-            animspeed       : 3000,     // delay between transitions
+            animduration    : 500,      // length of transition
+            animspeed       : 4000,     // delay between transitions
             automatic       : true,     // enable/disable automatic slide rotation
 
             // control and marker configuration
             showcontrols    : true,     // enable/disable next + previous UI elements
             centercontrols  : true,     // vertically center controls
-            nexttext        : '<div class="slideshowbtn"><img src="/assets/application/icons/arrow.svg"></div>',   // text/html inside next UI element
-            prevtext        : '<div class="slideshowbtn"><img src="/assets/application/icons/arrow.svg"></div>',   // text/html inside previous UI element
-            showmarkers     : true,     // enable/disable individual slide UI markers
+            nexttext        : '<div class="slideshowbtn"><img src="/images/icons/arrow.svg"></div>',   // text/html inside next UI element
+            prevtext        : '<div class="slideshowbtn"><img src="/images/icons/arrow_left.svg"></div>',   // text/html inside previous UI element
+            showmarkers     : false,     // enable/disable individual slide UI markers
             centermarkers   : true,     // horizontally center markers
 
             // interaction values
             keyboardnav     : true,     // enable/disable keyboard navigation
-            hoverpause      : true,     // enable/disable pause slides on hover
+            hoverpause      : false,     // enable/disable pause slides on hover
 
             // presentational options
             usecaptions     : true,     // enable/disable captions using img title attribute
             randomstart     : false,     // start from a random slide
-            responsive      : false     // enable responsive behaviour
+            responsive      : true     // enable responsive behaviour
 
         };
 
