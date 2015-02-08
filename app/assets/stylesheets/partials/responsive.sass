@@ -23,7 +23,7 @@
       display: inline-block
 
 
-  .navbarexpander
+  #navbarexpander
     display: none
     width: 100%
 
@@ -53,7 +53,7 @@
       text-align: center
       li
         display: inline-block
-  .navbarexpander
+  #navbarexpander
     display: none
     width: 100%
   .boxitem
@@ -86,15 +86,19 @@
       overflow: hidden
       text-align: center
       li
-        box-sizeing: border-box
+        // box-sizeing: border-box
         width: 100%
         text-align: center
+        height: 60px
+        vertical-align: middle
+
         &:hover
           background: $mobile-menu-dark
         a
           color: $white
+          margin-top: -15px
 
-    .navbarexpander
+    #navbarexpander
       display: block
       width: 100%
       text-align: left

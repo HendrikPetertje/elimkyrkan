@@ -10,7 +10,7 @@ function navBar () {
   }
 
   // open and close navbar
-  $('.navbarexpander').click(function(e){
+  $('#navbarexpander').click(function(e){
     $('.responsivenavbar ul').slideToggle(animationspeed);
   });
 

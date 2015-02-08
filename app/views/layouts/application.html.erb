@@ -8,10 +8,11 @@
   <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cabin:400|Open+Sans:400', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
 <div class="maincontainer">
   <div class="pagecontainer fadein">
     <div class="headercontainer container responsiveheadercontainer">
@@ -28,7 +29,7 @@
             <li><h2><%= link_to 'Länkar', pages_links_path %></h2></li>
             <li><h2><%= link_to 'Förbön', pages_prayer_path %></h2></li>
           </ul>
-          <div class="navbarexpander">
+          <div id="navbarexpander">
             <a>Meny</a>
             <%= image_tag('menu.png') %>
             <div class="cleardiv"></div>
@@ -77,7 +78,7 @@
       </ul>
       <div class="session">
         <h6>
-          <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Elimkyrkan Sundsvall - 2015
+          <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Sundsvalls Baptistförsamling - 2015
           <%= link_to "Logga ut", destroy_user_session_path, :method => :delete if user_signed_in? %>
         </h6>
       </div>
