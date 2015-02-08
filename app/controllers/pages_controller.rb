@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   def prayer
   end
 
-  # and now the real deal
+  # and now the real deal modifying and editting texts on the page
   def edit
   end
 

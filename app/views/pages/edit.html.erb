@@ -1,0 +1,14 @@
+<div class="container">
+  <%= form_for @page do |f| %>
+    <% if @page.errors.any? %>
+      <% @page.erros.each do |error| %>
+        <p>error</p>
+      <% end %>
+    <% end %>
+    <% f.label :content %>
+    <%= f.cktext_area :content %>
+    <br>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require ckeditor/init
 //= require partials/std_script
 //= require partials/responsive
 //= require partials/slideshow
