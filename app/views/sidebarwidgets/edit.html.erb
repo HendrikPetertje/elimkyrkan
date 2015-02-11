@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Ändra sidebar widget</h1>
+  <br>
+  <%= form_for @sidebarwidget do |f| %>
+    <% if @sidebarwidget.errors.any? %>
+      <% @sidebarwidget.erros.each do |error| %>
+        <p>error</p>
+      <% end %>
+    <% end %>
+    <% f.label :content %>
+    <%= f.cktext_area :content %>
+    <br>
+    <%= f.label :position %>
+    <%= f.number_field :position %>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>

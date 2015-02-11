@@ -14,9 +14,11 @@ Rails.application.routes.draw do
 
     get 'pages/prayer', to: 'pages#prayer', as: :pages_prayer
 
-
-    resources :pages, only: [:edit, :update]
     devise_for :users
+    scope 'admin' do
+      resources :pages, only: [:edit, :update]
+      resources :sidebarwidgets, except: [:show]
+    end
     mount Ckeditor::Engine => '/ckeditor'
   end
 end

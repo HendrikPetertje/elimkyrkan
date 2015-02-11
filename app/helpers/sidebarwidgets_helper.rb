@@ -1,0 +1,2 @@
+module SidebarwidgetsHelper
+end
