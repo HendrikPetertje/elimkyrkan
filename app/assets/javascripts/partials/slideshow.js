@@ -27,7 +27,7 @@
 
             // interaction values
             keyboardnav     : true,     // enable/disable keyboard navigation
-            hoverpause      : false,     // enable/disable pause slides on hover
+            hoverpause      : true,     // enable/disable pause slides on hover
 
             // presentational options
             usecaptions     : true,    // enable/disable captions using img title attribute
@@ -546,11 +546,11 @@
 
             $.each($slides, function (key, slide) {
 
-                var caption = $(slide).children('img:first-child').attr('alt');
+                var caption = $(slide).children('img:first-child').attr('title');
 
                 // Account for images wrapped in links
                 if(!caption){
-                    caption = $(slide).children('a').find('img:first-child').attr('alt');
+                    caption = $(slide).children('a').find('img:first-child').attr('title');
                 }
 
                 if (caption) {
