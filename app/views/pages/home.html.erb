@@ -10,20 +10,19 @@
   </div><div class="responsivesidecontent">
     <aside class="sidecontent">
       <% if user_signed_in? %>
-        <%= link_to 'Ny sidebarwidget', new_sidebarwidget_path %>
-        <br>
+        <div class="sideitem boxitem">
+          <%= link_to 'Ny sidebarwidget', new_sidebarwidget_path %>
+        </div>
         <br>
       <% end %>
-      <% @sidebarwidgets.each do |widget| %>
-      <div class="responisvesideitem">
-        <div class="sideitem boxitem">
+      <% @sidebarwidgets.each do |widget| %><div class="responisvesideitem"><div class="sideitem boxitem">
           <h3><%= widget.title %></h3>
           <%= widget.content.html_safe %>
           <% if user_signed_in? %>
             <br>
-            <%= link_to 'edit', edit_sidebarwidget_path(widget) %>
+            <%= link_to 'ändra', edit_sidebarwidget_path(widget) %>
             |
-            <%= link_to 'delete', sidebarwidget_path(widget), method: 'delete' %>
+            <%= link_to 'ta bort', sidebarwidget_path(widget), method: 'delete' %>
             |
             <%= form_for widget, html: { class: 'inlineblock' } do |f| %>
               <%= f.label :position %>
@@ -31,9 +30,8 @@
             <% end %>
           <% end %>
         </div>
-      </div>
-      <% end %>
-    </aside>
+      </div><% end %>
+      </aside>
   </div>
   <div class="cleardiv"></div>
 </div>
