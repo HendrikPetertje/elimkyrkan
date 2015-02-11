@@ -78,8 +78,9 @@
       </ul>
       <div class="session">
         <h6>
-          <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %> Sundsvalls Baptistförsamling - 2015
-          <%= link_to "Logga ut", destroy_user_session_path, :method => :delete if user_signed_in? %>
+          <%= link_to '©', new_user_session_path, class: 'logintext' unless user_signed_in? %>
+          <%= link_to "Logga ut - ", destroy_user_session_path, :method => :delete if user_signed_in? %>
+           Sundsvalls Baptistförsamling - 2015
         </h6>
       </div>
     </footer>
