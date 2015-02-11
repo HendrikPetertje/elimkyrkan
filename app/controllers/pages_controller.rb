@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @homeintro = Page.find_by(title: 'home-intro')
+    @sidebarwidgets = Sidebarwidget.all
   end
 
   def activities

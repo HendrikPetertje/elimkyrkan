@@ -9,32 +9,30 @@
     </div>
   </div><div class="responsivesidecontent">
     <aside class="sidecontent">
+      <% if user_signed_in? %>
+        <%= link_to 'Ny sidebarwidget', new_sidebarwidget_path %>
+        <br>
+        <br>
+      <% end %>
+      <% @sidebarwidgets.each do |widget| %>
       <div class="responisvesideitem">
         <div class="sideitem boxitem">
-        <h3>Li Europan</h3>
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
-        </div>
-      </div><div class="responisvesideitem">
-        <div class="sideitem boxitem">
-        <h3>Li Europan</h3>
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
-        </div>
-      </div><div class="responisvesideitem">
-        <div class="sideitem boxitem">
-        <h3>Li Europan</h3>
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
-        </div>
-      </div><div class="responisvesideitem">
-        <div class="sideitem boxitem">
-        <h3>Li Europan</h3>
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
-        </div>
-      </div><div class="responisvesideitem">
-        <div class="sideitem boxitem">
-        <h3>Li Europan</h3>
-        <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
+          <h3><%= widget.title %></h3>
+          <%= widget.content.html_safe %>
+          <% if user_signed_in? %>
+            <br>
+            <%= link_to 'edit', edit_sidebarwidget_path(widget) %>
+            |
+            <%= link_to 'delete', sidebarwidget_path(widget), method: 'delete' %>
+            |
+            <%= form_for widget, html: { class: 'inlineblock' } do |f| %>
+              <%= f.label :position %>
+              <%= f.number_field :position, style: 'width: 30px' %>
+            <% end %>
+          <% end %>
         </div>
       </div>
+      <% end %>
     </aside>
   </div>
   <div class="cleardiv"></div>

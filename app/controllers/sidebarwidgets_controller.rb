@@ -1,5 +1,6 @@
 class SidebarwidgetsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_sidebarwidget, only: [:edit, :update, :destroy]
 
   def new
     @sidebarwidget = Sidebarwidget.new
@@ -39,7 +40,7 @@ class SidebarwidgetsController < ApplicationController
   private
 
   def sidebarwidget_params
-    params.require(:sidebarwidget).permit(:content, :position)
+    params.require(:sidebarwidget).permit(:content, :position, :title)
   end
 
   def set_sidebarwidget
