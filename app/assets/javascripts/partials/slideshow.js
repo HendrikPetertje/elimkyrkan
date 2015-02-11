@@ -30,7 +30,7 @@
             hoverpause      : false,     // enable/disable pause slides on hover
 
             // presentational options
-            usecaptions     : true,     // enable/disable captions using img title attribute
+            usecaptions     : true,    // enable/disable captions using img title attribute
             randomstart     : false,     // start from a random slide
             responsive      : true     // enable responsive behaviour
 
@@ -546,11 +546,11 @@
 
             $.each($slides, function (key, slide) {
 
-                var caption = $(slide).children('img:first-child').attr('title');
+                var caption = $(slide).children('img:first-child').attr('alt');
 
                 // Account for images wrapped in links
                 if(!caption){
-                    caption = $(slide).children('a').find('img:first-child').attr('title');
+                    caption = $(slide).children('a').find('img:first-child').attr('alt');
                 }
 
                 if (caption) {
