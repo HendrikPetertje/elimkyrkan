@@ -1,0 +1,32 @@
+input, select
+  display: block
+  margin: 2px 0 10px 0
+label
+  display: block
+  margin: 2px 0 5px 0
+  color: $dark_blue
+
+input
+  background: $white
+  border: none
+  padding: 5px
+  border-bottom: solid $gray
+  outline: none
+  @extend .transition
+  width: 250px
+  &:focus
+    border-bottom: solid $light_blue
+    color: $dark_blue
+
+input[type="submit"]
+  background: $dark_blue
+  border-bottom: none
+  padding: 10px
+  width: auto
+  cursor: pointer
+  color: white
+  &:hover
+    background: $light_blue
+
+.cke
+  margin: 3px 0 10px 0 !important

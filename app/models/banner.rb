@@ -14,5 +14,6 @@
 
 class Banner < ActiveRecord::Base
   default_scope { order("#{table_name}.position ASC") }
-  validates :ttle, :shorttitle, :photo, :link, :position, presence: true
+  mount_uploader :photo, BannerphotoUploader
+  validates :title, :shorttitle, :photo, :position, presence: true
 end
