@@ -18,7 +18,9 @@
     <div class="headercontainer container responsiveheadercontainer">
       <header class="header responisveheader boxitem">
         <div class="logo block responsivelogo">
-          <%= image_tag asset_path 'application/logo.jpg' %>
+          <%= link_to root_path do %>
+            <%= image_tag asset_path 'application/logo.jpg' %>
+          <% end %>
         </div>
         <nav class="block navbar responsivenavbar">
           <ul>
