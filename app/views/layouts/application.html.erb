@@ -55,13 +55,25 @@
       <h4><%= flash[:alert] %></h4>
     </div>
     <% end %>
+    <% if user_signed_in? %>
+      <%= link_to 'Ny banner', new_banner_path %>
+    <% end %>
     <div id="my-slideshow" class="slideshow">
       <ul class="bjqs">
-        <li><img src="<%= asset_path 'application/headers_elimkyrkan-01.jpg' %>" data-title="Förstasidansbild 1" data-heading="Img 1"></li>
-        <li><img src="<%= asset_path 'application/headers_elimkyrkan-02.jpg' %>" data-title="Förstasidansbild 2" data-heading="Img 2"></li>
-        <li><img src="<%= asset_path 'application/headers_elimkyrkan-03.jpg' %>" data-title="Förstasidansbild 3" data-heading="Img 3"></li>
+        <% @banners.each do |banner| %>
+          <li><img src="<%= banner.photo_url(:normal) %>" data-title="<%= banner.title %>" data-heading="<%= banner.shorttitle %>"></li>
+        <% end %>
       </ul>
     </div>
+    <% if user_signed_in? %>
+      <% @banners.each do |banner| %>
+        <div class="banner_edit">
+          <div class="title"><%= banner.shorttitle %></div>
+          <div class="link"><%= link_to 'Ändra', edit_banner_path(banner) %> | <%= link_to 'Ta bort', banner_path(banner), method: 'delete' %></div>
+          <div class="singletonform"><%= form_for banner, html: { class: 'inlineblock' } do |f| %><%= f.label :position, style: 'display:inline-block;' %><%= f.number_field :position, style: 'display:inline-block;width: 30px' %><% end %></div>
+        </div>
+      <% end %>
+    <% end %>
     <div class="cleardiv" style="margin-bottom: 10px;"></div>
     <!-- Rendering page -->
     <%= yield %>

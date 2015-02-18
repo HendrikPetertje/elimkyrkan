@@ -1,5 +1,6 @@
 class BannersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_banner, only: [:edit, :update, :destroy]
 
   def new
     @banner = Banner.new
@@ -16,7 +17,9 @@ class BannersController < ApplicationController
   end
 
   def update
-    return redirect_to root_path, notice: 'Banner saved' if @banner.save
+    if @banner.update(banner_params)
+      return redirect_to root_path, notice: 'Banner saved'
+    end
     flash.now[:error] = 'Please review the fields'
     render 'edit'
   end
