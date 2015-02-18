@@ -22,7 +22,7 @@
             centercontrols  : true,     // vertically center controls
             nexttext        : '<div class="slideshowbtn"><img src="/images/icons/arrow.svg"></div>',   // text/html inside next UI element
             prevtext        : '<div class="slideshowbtn"><img src="/images/icons/arrow_left.svg"></div>',   // text/html inside previous UI element
-            showmarkers     : false,     // enable/disable individual slide UI markers
+            showmarkers     : true,     // enable/disable individual slide UI markers
             centermarkers   : true,     // horizontally center markers
 
             // interaction values
@@ -455,14 +455,31 @@
 
             // for every slide, create a marker
             $.each($slides, function(key, slide){
+                var heading = $(slide).children('img:first-child').attr('data-heading');
 
-                var slidenum    = key + 1,
+                var slidenum    = heading,
                     gotoslide   = key + 1;
 
                 if(settings.animtype === 'slide'){
                     // + 2 to account for clones
                     gotoslide = key + 2;
                 }
+
+            //     $.each($slides, function (key, slide) {
+
+            //     var caption = $(slide).children('img:first-child').attr('data-title');
+
+            //     // Account for images wrapped in links
+            //     if(!caption){
+            //         caption = $(slide).children('a').find('img:first-child').attr('data-title');
+            //     }
+
+            //     if (caption) {
+            //         caption = $('<p class="bjqs-caption">' + caption + '</p>');
+            //         caption.appendTo($(slide));
+            //     }
+
+            // });
 
                 var marker = $('<li><a href="#">'+ slidenum +'</a></li>');
 
