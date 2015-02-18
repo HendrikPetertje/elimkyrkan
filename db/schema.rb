@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211172615) do
+ActiveRecord::Schema.define(version: 20150218173650) do
+
+  create_table "banners", force: :cascade do |t|
+    t.string   "title"
+    t.string   "shorttitle"
+    t.string   "photo"
+    t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "position"
+  end
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
