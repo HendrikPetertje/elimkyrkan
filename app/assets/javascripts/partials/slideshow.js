@@ -451,7 +451,7 @@
         var conf_markers = function() {
 
             // create a wrapper for our markers
-            $m_wrapper = $('<ol class="bjqs-markers"></ol>');
+            $m_wrapper = $('<ol class="bjqs-markers"><div class="bjqs-markers-div"></div></ol>');
 
             // for every slide, create a marker
             $.each($slides, function(key, slide){
@@ -465,22 +465,6 @@
                     gotoslide = key + 2;
                 }
 
-            //     $.each($slides, function (key, slide) {
-
-            //     var caption = $(slide).children('img:first-child').attr('data-title');
-
-            //     // Account for images wrapped in links
-            //     if(!caption){
-            //         caption = $(slide).children('a').find('img:first-child').attr('data-title');
-            //     }
-
-            //     if (caption) {
-            //         caption = $('<p class="bjqs-caption">' + caption + '</p>');
-            //         caption.appendTo($(slide));
-            //     }
-
-            // });
-
                 var marker = $('<li><a href="#">'+ slidenum +'</a></li>');
 
                 // set the first marker to be active
@@ -493,7 +477,6 @@
                         go(false,gotoslide);
                     }
                 });
-
                 // add the marker to the wrapper
                 marker.appendTo($m_wrapper);
 
@@ -504,9 +487,9 @@
 
             // center the markers
             if (settings.centermarkers) {
-                $m_wrapper.addClass('h-centered');
-                var offset = (settings.width - $m_wrapper.width()) / 2;
-                $m_wrapper.css('left', offset);
+                // $m_wrapper.addClass('h-centered');
+                // var offset = (settings.width - $m_wrapper.width()) / 2;
+                // $m_wrapper.css('left', offset);
             }
 
         };

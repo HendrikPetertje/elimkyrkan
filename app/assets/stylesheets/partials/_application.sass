@@ -30,25 +30,30 @@ body
 p.bjqs-caption
   right: 0px
   bottom: 0px
-  background-color: rgba(0,0,0,0.5)
-  color: #eeeeee
+  background-color: rgba(1,1,1,0.5)
+  color: #eee
   display: block
   margin: 0
   padding: 15px
   position: absolute
+  @extend .transition
+  &:hover
+    background: rgba(1,1,1,0.8)
+    color: $white
 
 .bjqs-markers
-  background: rgba(0,0,0,0)
+  float: left
+  @extend .boxitem
   li
-    float: left
-    display: inline
+    display: inline-block
     a
-      color: white
+      color: $mobile-menu-dark
       display: block
-      background: rgba(0,0,0,0.5)
-      padding: 5px
+      background: $element-background
+      padding: 10px
       &:hover
-        background: rgba(1,1,1,1)
+        background: rgba(1,1,1,0.8)
+        color: $white
   
 .cleardiv
   clear: both
