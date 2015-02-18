@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     scope 'admin' do
       resources :pages, only: [:edit, :update]
       resources :sidebarwidgets, except: [:show]
+      resources :banners, except: [:show]
     end
     mount Ckeditor::Engine => '/ckeditor'
   end
