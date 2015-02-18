@@ -13,7 +13,7 @@
 
             // transition valuess
             animtype        : 'fade',
-            animduration    : 500,      // length of transition
+            animduration    : 700,      // length of transition
             animspeed       : 4000,     // delay between transitions
             automatic       : true,     // enable/disable automatic slide rotation
 
@@ -546,11 +546,11 @@
 
             $.each($slides, function (key, slide) {
 
-                var caption = $(slide).children('img:first-child').attr('title');
+                var caption = $(slide).children('img:first-child').attr('data-title');
 
                 // Account for images wrapped in links
                 if(!caption){
-                    caption = $(slide).children('a').find('img:first-child').attr('title');
+                    caption = $(slide).children('a').find('img:first-child').attr('data-title');
                 }
 
                 if (caption) {
