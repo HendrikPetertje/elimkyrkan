@@ -15,6 +15,8 @@ gem 'mini_magick'
 gem 'ckeditor'
 gem 'devise'
 
+gem 'rails_12factor'
+
 group :production do
   gem 'pg'
 end
