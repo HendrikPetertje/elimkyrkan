@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'events/index'
+
+  get 'events/show'
+
   scope(path_names: { new: 'ny', edit: 'andra' }) do
     root 'pages#home'
 

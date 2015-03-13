@@ -14,6 +14,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'ckeditor'
 gem 'devise'
+gem 'icalendar', require: false
 
 group :production do
   gem 'pg'

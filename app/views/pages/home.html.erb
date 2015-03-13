@@ -9,6 +9,10 @@
     </div>
   </div><div class="responsivesidecontent">
     <aside class="sidecontent">
+      <!-- calendar -->
+      <div class="calendar sidebarcalendar boxitem"><div class="calheader">
+      <h2>Det händer i Elimkyrkan</h2></div><ul></ul></div>
+
       <% if user_signed_in? %>
         <div class="sideitem boxitem">
           <%= link_to 'Ny sidebarwidget', new_sidebarwidget_path %>
@@ -31,7 +35,8 @@
           <% end %>
         </div>
       </div><% end %>
-      </aside>
+
+    </aside>
   </div>
   <div class="cleardiv"></div>
 </div>

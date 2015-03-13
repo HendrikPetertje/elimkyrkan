@@ -1,0 +1,73 @@
+.calendar 
+	background: $white
+	list-style: none
+	word-wrap: break-word
+	
+	.calheader
+		padding: 10px
+		background: $dark-blue
+		color: $white
+		
+	ul
+		background: $white
+		li
+			border-bottom: 3px solid rgba(200,200,200,1)
+			display: flex
+			font-family: FuturaMd, Arial
+			.datebox
+				float: left
+				width: 50px
+				background: $white //rgba(230,230,230,1)
+				align-items: stretch
+				min-height: 60px
+				padding-top: 5px
+				.number
+					text-align: center
+					font-size: 19pt
+				.day
+					text-align: center
+					font-size: 10pt
+			.eventbox
+				width: 100%
+				line-height: 20px
+				.eventrow
+					border-bottom: 1px solid rgba(230,230,230,1)
+					// border-left: 3px solid blue
+					width: 100%
+					display: flex
+					font-size: 11pt
+					&:last-child
+						border-bottom: none
+					.eventtime
+						float: left
+						width: 60px
+						align-items: stretch
+						text-align: center
+					.eventtitle
+						width: 100%
+			.issunday
+				//background: rgba(242,124,114,1)
+				color: red $white
+				.number
+					color: $red
+				.day
+					color: $red
+
+.sidebarcalendar
+	width: 260px
+	ul
+		display: block
+		clear: both
+		position: static
+		margin-bottom: 10px
+		height: 400px
+		overflow-y: scroll
+
+@media screen and (max-width:980px)
+	.sidebarcalendar
+		display: inline-block
+		width: 100%
+		margin: 0
+		ul
+			height: auto
+			overflow-y: auto
