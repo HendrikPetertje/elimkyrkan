@@ -51,3 +51,36 @@ else
     puts 'Home was created succesfully'
   end
 end
+
+if Page.where(title: 'activity-intro').any?
+  puts 'activity was already created'
+else
+  if Page.create(title: 'activity-intro', content: 'Please do some content editing')
+    puts 'activity was created succesfully'
+  end
+end
+
+if Page.where(title: 'about-intro').any?
+  puts 'about was already created'
+else
+  if Page.create(title: 'about-intro', content: 'Please do some content editing')
+    puts 'about was created succesfully'
+  end
+end
+
+if Page.where(title: 'links-intro').any?
+  puts 'links was already created'
+else
+  if Page.create(title: 'links-intro', content: 'Please do some content editing')
+    puts 'links was created succesfully'
+  end
+end
+
+
+if Page.where(title: 'prayer-intro').any?
+  puts 'prayer was already created'
+else
+  if Page.create(title: 'prayer-intro', content: 'Please do some content editing')
+    puts 'prayer was created succesfully'
+  end
+end

@@ -16,6 +16,8 @@ gem 'ckeditor'
 gem 'devise'
 gem 'icalendar', require: false
 
+gem 'rails_12factor'
+
 group :production do
   gem 'pg'
 end

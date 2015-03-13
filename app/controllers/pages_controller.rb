@@ -1,27 +1,41 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:edit, :update]
+  before_action :set_sidebar
 
   def home
-    @homeintro = Page.find_by(title: 'home-intro')
-    @sidebarwidgets = Sidebarwidget.all
+    @title = 'välkommen'
+    @pagecontent = Page.find_by(title: 'home-intro')
   end
 
   def activities
+    @title = 'Aktiviteter'
+    @pagecontent = Page.find_by(title: 'activity-intro')
+    render 'home'
   end
 
   def about
+    @title = 'Om oss'
+    @pagecontent = Page.find_by(title: 'about-intro')
+    render 'home'
   end
 
   def program
+
   end
 
   def links
+    @title = 'Länkar'
+    @pagecontent = Page.find_by(title: 'links-intro')
+    render 'home'
   end
 
   def contact
   end
 
   def prayer
+    @title = 'Förbön'
+    @pagecontent = Page.find_by(title: 'prayer-intro')
+    render 'home'
   end
 
   # and now the real deal modifying and editting texts on the page
@@ -39,6 +53,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def set_sidebar
+    @sidebarwidgets = Sidebarwidget.all
+  end
 
   def set_page
     @page = Page.find(params[:id])

@@ -1,10 +1,10 @@
-<% title 'välkommen' %>
+<% title @title %>
 <div class="responsivecontent">
   <div class="responsivemaincontent">
     <div class="maincontent boxitem">
-      <%= @homeintro.content.html_safe %>
+      <%= @pagecontent.content.html_safe %>
       <% if user_signed_in? %>
-        <%= link_to 'ändra', edit_page_path(@homeintro), style: 'display:block' %>
+        <%= link_to 'ändra', edit_page_path(@pagecontent), style: 'display:block' %>
       <% end %>
     </div>
   </div><div class="responsivesidecontent">
