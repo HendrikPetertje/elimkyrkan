@@ -32,21 +32,29 @@
 				line-height: 20px
 				.eventrow
 					border-bottom: 1px solid rgba(230,230,230,1)
-					// border-left: 3px solid blue
 					width: 100%
-					display: flex
+					// display: flex
 					font-size: 11pt
 					&:last-child
 						border-bottom: none
-					.eventtime
-						float: left
-						width: 60px
-						align-items: stretch
-						text-align: center
-					.eventtitle
-						width: 100%
+					.mainrow
+						display: flex
+						.eventtime
+							float: left
+							width: 60px
+							align-items: stretch
+							text-align: center
+						.eventtitle
+							width: 100%
+							&:after
+								clear: both
+				.eventsummmary
+					display: none
+					width: auto
+					padding-left: 55px
+					// font-style: italic
+					font-size: 9pt
 			.issunday
-				//background: rgba(242,124,114,1)
 				color: red $white
 				.number
 					color: $red
@@ -62,12 +70,22 @@
 		margin-bottom: 10px
 		height: 400px
 		overflow-y: scroll
+		li
+			.eventbox
+				.eventsummmary
+					padding-left: 0
+					margin-left: 10px
 
 @media screen and (max-width:980px)
 	.sidebarcalendar
 		display: inline-block
 		width: 100%
-		margin: 0
+		margin: 0		
 		ul
 			height: auto
 			overflow-y: auto
+			li
+				.eventbox
+					.eventsummmary
+						padding-left: 0
+						margin-left: 10px
