@@ -16,7 +16,8 @@
 //= require ckeditor/init
 //= require partials/responsive
 //= require partials/slideshow
+//= require partials/facebook
 //= require partials/calendar
-//= require partials/std_script
 //= require partials/flash.coffee
+//= require partials/std_script
 

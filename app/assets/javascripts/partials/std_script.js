@@ -2,6 +2,7 @@ var ready;
 ready = function() {
   $('#my-slideshow').bjqs({
   });
+  loadFacebookSDK();
   loadCalendar();
 };
 

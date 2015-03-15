@@ -6,6 +6,17 @@
       <% if user_signed_in? %>
         <%= link_to 'ändra', edit_page_path(@pagecontent), style: 'display:block' %>
       <% end %>
+      <br>
+      <div class="socialmaincontent">
+        <ul class="share-buttons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><%= image_tag("application/social/Facebook.png") %></a></li>
+          <li><a href="https://twitter.com/intent/tweet?source=<%= request.original_url %>&text=:<%= request.original_url %>" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><%= image_tag("application/social/Twitter.png") %></a></li>
+          <li><a href="https://plus.google.com/share?url=<%= request.original_url %>" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><%= image_tag("application/social/Google+.png") %></a></li>
+          <li><a href="mailto:?subject=&body=:<%= request.original_url %>" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><%= image_tag("application/social/Email.png") %></a></li>
+        </ul>
+
+      </div>
+
     </div>
   </div><div class="responsivesidecontent">
     <aside class="sidecontent">
@@ -35,7 +46,13 @@
           <% end %>
         </div>
       </div><% end %>
-
+      <!-- Like  us on facebook -->
+      <div class="responisvesideitem">
+        <div class="boxitem sideitem">
+          <h3 style="margin-bottom: 10px;">Gilla oss på Facebook</h3>
+          <div class="fb-like-box" data-href="https://www.facebook.com/pages/Elimkyrkan-Sundsvall/376163675824069?fref=ts" data-width="230" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+        </div>
+      </div>
     </aside>
   </div>
   <div class="cleardiv"></div>
