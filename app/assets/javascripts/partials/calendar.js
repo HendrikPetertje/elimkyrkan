@@ -97,9 +97,11 @@ function drawCalendar (cal) {
   $(".calendar ul li .eventbox .eventrow").click(function (e) {
     if (! $(this).children(".eventsummmary").is(':visible'))
       $(".eventsummmary").slideUp(300);
-    
+
     $(this).children(".eventsummmary").slideToggle(300);
   })
+
+  $(".calendar").linkify();
 }
 
 // Linkify plugin
