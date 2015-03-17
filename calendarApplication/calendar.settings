@@ -1,0 +1,13 @@
+#Calendar settings
+
+#url to calendar
+url:https://www.google.com/calendar/ical/elimkyrkan%40gmail.com/public/basic.ics
+
+#update frequency in seconds
+update-frequency:900
+
+#time span - for how many days it should fetch data
+time-span:30
+
+#the location of the output file
+target-file:..\public\calendar\calendar.json
