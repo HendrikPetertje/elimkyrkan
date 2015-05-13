@@ -2,6 +2,7 @@ var maxNumOfDays = 10;
 
 function loadCalendar () {
   $.getJSON("/calendar/calendar.json", function (json) {
+    console.log(json);
     drawCalendar(json);
   });
 }
@@ -57,7 +58,7 @@ function drawCalendar (cal) {
       return "Hela dagen";
     }
     if (h.toString().length == 1) {
-      h = h.toString() + "0";
+      h = "0" + h.toString();
     }
     if (m.toString().length == 1) {
       m = m.toString() + "0";
